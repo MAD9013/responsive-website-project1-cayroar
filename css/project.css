@@ -15,9 +15,10 @@
 }
 html{
     font-size: 16px;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family:Lato, Palatino, serif;
     /* change this font stack to your own choices */
     line-height: 1.5;
+    color: hsl(0, 0%, 0%);
 }
 p{
     
@@ -44,18 +45,30 @@ img{
 header{
     padding:1rem 2rem;
     color: black;
+    background-color: hsl(273, 1%, 93%);
+    border-top: 10px solid hsl(239, 93%, 71%);
+    margin-top: 20px;
 }
+
 header > h1{
-    
+    color: hsl(0, 1%, 58%)
 }
 header > h2{
-    
+    color: hsl(0, 1%, 74%)
 }
 /*************************************************
             NAVMENU
 *************************************************/
+nav a{
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+   /* font-size: 1.2rem;*/
+    font-weight: bold;
+}
 nav{
-    padding:1rem 2rem;
+    background: hsl(273, 3%, 93%);
+    display: flex;
+    justify-content: space-around;
 }
 nav > a,
 nav > a:visited,
@@ -78,20 +91,32 @@ section{
     
 }
 section p{
-    
+    font-size: 16px;
 }
 section p img{
     
 }
-
+section h1{
+    color: hsl(239, 93%, 71%)
+}
+section h2{
+    color: hsl(239, 93%, 71%)
+}
 /*************************************************
             FOOTER
 *************************************************/
+.comments{
+    display: flex;
+    justify-content: center;
+}
 footer{
-    padding:1rem 2rem;
+    background: hsl(273, 3%, 93%);
+    display: flex;
+    flex-direction: column;
+    border-top:  10px solid hsl(239, 93%, 71%);
 }
 .foot nav{
-    
+    ;
 }
 .foot section{
     
@@ -100,7 +125,9 @@ footer{
     
 }
 .foot dt{
-    
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    font-weight: bolder
 }
 .foot dd{
     
@@ -118,11 +145,34 @@ footer{
             MEDIA QUERIES for layout
 *************************************************/
 @media (max-width: 599px){
-    
+    .mainnav{
+        flex-direction: column;
+        border-top: 1px solid black;
+    }
+    .mainnav a{
+        border-bottom: 1px solid black;
+        padding-left: 30px
+    }
+    img{
+        width: 60vw
+    }
+    section p{
+        font-size: 1.1rem
+    }
 }
 @media (min-width: 600px) and (max-width:999px){
-    
+    img{
+        width: 40vw
+    }
+    section p{
+        font-size: 1.5rem
+    }
 }
 @media (min-width: 1000px){
-    
+    img{
+        width: 20vw
+    }
+    section p{
+        font-size: 1.8rem
+    }
 }
